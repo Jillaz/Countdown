@@ -335,7 +335,7 @@ MonoBehaviour:
   _countdownText: {fileID: 1122153348}
   _mouseClicker: {fileID: 2055307777}
   _startValue: 0
-  _delay: 2
+  _delay: 0.5
 --- !u!114 &1122153348
 MonoBehaviour:
   m_ObjectHideFlags: 0
