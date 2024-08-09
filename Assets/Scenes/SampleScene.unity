@@ -430,6 +430,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countdownText: {fileID: 1122153348}
+  _counterTik: {fileID: 2055307778}
+  _startValue: 0
 --- !u!1 &2055307772
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,9 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseClicker: {fileID: 2055307777}
-  _textToDisplay: {fileID: 1122153350}
   _delay: 0.5
-  _startValue: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

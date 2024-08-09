@@ -1,14 +1,13 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] private MouseClicker _mouseClicker;
-    [SerializeField] private View _textToDisplay;
+    [SerializeField] private MouseClicker _mouseClicker;    
     [SerializeField] private float _delay = 0.5f;
-    [SerializeField] private int _startValue = 0;
 
+    public event UnityAction Tick;
     private Coroutine _coroutine;
     private bool _isCoroutinePlaying = false;
 
@@ -42,9 +41,7 @@ public class Counter : MonoBehaviour
 
         while (true)
         {
-            _startValue++;
-            _textToDisplay.Display(_startValue.ToString());
-
+            Tick?.Invoke();
             yield return wait;
         }
     }

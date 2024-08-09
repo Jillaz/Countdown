@@ -5,7 +5,7 @@ public class MouseClicker : MonoBehaviour
 {
     public event UnityAction MouseButtonClick;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
