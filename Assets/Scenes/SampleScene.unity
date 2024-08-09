@@ -320,25 +320,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-=======
---- !u!114 &1122153347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122153345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fe75670368ffe418a8ab2aace01ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _countdownText: {fileID: 1122153348}
-  _mouseClicker: {fileID: 2055307777}
-  _startValue: 0
-  _delay: 2
->>>>>>> parent of dd5b078 (Установлены стартовые значения)
 --- !u!114 &1122153348
 MonoBehaviour:
   m_ObjectHideFlags: 0
