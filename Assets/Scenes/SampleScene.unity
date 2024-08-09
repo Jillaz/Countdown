@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 1122153346}
   - component: {fileID: 1122153349}
   - component: {fileID: 1122153348}
-  - component: {fileID: 1122153347}
+  - component: {fileID: 1122153350}
   m_Layer: 5
   m_Name: CountdownText
   m_TagString: Untagged
@@ -320,22 +320,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1122153347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122153345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fe75670368ffe418a8ab2aace01ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _countdownText: {fileID: 1122153348}
-  _mouseClicker: {fileID: 2055307777}
-  _startValue: 0
-  _delay: 0.5
 --- !u!114 &1122153348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -433,6 +417,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122153345}
   m_CullTransparentMesh: 1
+--- !u!114 &1122153350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122153345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b728557276f7a841923341e8e0f1866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countdownText: {fileID: 1122153348}
 --- !u!1 &2055307772
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +443,7 @@ GameObject:
   - component: {fileID: 2055307774}
   - component: {fileID: 2055307773}
   - component: {fileID: 2055307777}
+  - component: {fileID: 2055307778}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -548,6 +546,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ce7b69d8809a04abb7d956afbee6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2055307778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055307772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fe75670368ffe418a8ab2aace01ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouseClicker: {fileID: 2055307777}
+  _textToDisplay: {fileID: 1122153350}
+  _delay: 0.5
+  _startValue: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

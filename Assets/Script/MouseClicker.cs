@@ -4,17 +4,12 @@ using UnityEngine.Events;
 public class MouseClicker : MonoBehaviour
 {
     public event UnityAction MouseButtonClick;
-        
+
     void Update()
     {
-        if (MouseButtonClick == null)
+        if (Input.GetMouseButtonDown(0))
         {
-            return;
-        }
-
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            MouseButtonClick.Invoke();
+            MouseButtonClick?.Invoke();
         }
     }
 }

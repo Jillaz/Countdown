@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _countdownText;
     [SerializeField] private MouseClicker _mouseClicker;
-    [SerializeField] private int _startValue = 0;
+    [SerializeField] private View _textToDisplay;
     [SerializeField] private float _delay = 0.5f;
+    [SerializeField] private int _startValue = 0;
 
-    private IEnumerator _coroutine;
+    private Coroutine _coroutine;
     private bool _isCoroutinePlaying = false;
-
-    void Start()
-    {
-        _countdownText.text = _startValue.ToString();
-        _coroutine = IncreaseCountdown();
-    }
 
     private void OnEnable()
     {
@@ -32,7 +26,7 @@ public class Counter : MonoBehaviour
     {
         if (_isCoroutinePlaying == false)
         {
-            StartCoroutine(_coroutine);
+            _coroutine = StartCoroutine(IncreaseCountdown());
             _isCoroutinePlaying = true;
         }
         else
@@ -49,7 +43,7 @@ public class Counter : MonoBehaviour
         while (true)
         {
             _startValue++;
-            _countdownText.text = _startValue.ToString();
+            _textToDisplay.Display(_startValue.ToString());
 
             yield return wait;
         }
