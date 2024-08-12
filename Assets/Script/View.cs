@@ -4,27 +4,25 @@ using UnityEngine;
 public class View : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _countdownText;
-    [SerializeField] private Counter _counterTik;
-    [SerializeField] private int _startValue = 0;
+    [SerializeField] private Counter _counter;
 
     private void Start()
     {
-        _countdownText.text = _startValue.ToString();
+        _countdownText.text = _counter.CounterValue.ToString();
     }
 
     private void OnEnable()
     {
-        _counterTik.Tick += Display;
+        _counter.Tick += Display;
     }
 
     private void OnDisable()
     {
-        _counterTik.Tick -= Display;
+        _counter.Tick -= Display;
     }
 
     private void Display()
     {
-        _startValue++;
-        _countdownText.text = _startValue.ToString();
+        _countdownText.text = _counter.CounterValue.ToString();
     }
 }

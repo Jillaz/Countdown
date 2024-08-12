@@ -4,12 +4,15 @@ using UnityEngine.Events;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] private MouseClicker _mouseClicker;    
+    [SerializeField] private MouseClicker _mouseClicker;
     [SerializeField] private float _delay = 0.5f;
+    [SerializeField] private int _startValue = 0;
+    private bool _isCoroutinePlaying = false;
+    private Coroutine _coroutine;
 
     public event UnityAction Tick;
-    private Coroutine _coroutine;
-    private bool _isCoroutinePlaying = false;
+
+    public int CounterValue => _startValue;
 
     private void OnEnable()
     {
@@ -30,7 +33,11 @@ public class Counter : MonoBehaviour
         }
         else
         {
-            StopCoroutine(_coroutine);
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+            }
+
             _isCoroutinePlaying = false;
         }
     }
@@ -41,6 +48,7 @@ public class Counter : MonoBehaviour
 
         while (true)
         {
+            _startValue++;
             Tick?.Invoke();
             yield return wait;
         }
